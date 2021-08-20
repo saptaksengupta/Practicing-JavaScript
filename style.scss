@@ -1,0 +1,14 @@
+.some-class {
+    height: dynamicHeight('');
+}
+
+@mixin dynamicHeight($screenSize) {
+    
+    $screenSize: {
+        height: '100%'
+    }
+}
+
+.class-{index}: {
+    
+}

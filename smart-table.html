@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Table</title>
+    <style>
+        .header,
+        .hidden-row-template {
+            display: grid;
+            grid-template-columns: 10% 30% 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Smart Table</h1>
+    <div class="container">
+        <div class="search-container">
+            <div>
+                <Input type="text" id="search-input" onkeyup="utils.onSearch()" />
+            </div>
+        </div>
+        <div class="header">
+            <div>Select Rows</div>
+            <div>Name</div>
+            <div>Email</div>
+        </div>
+        <div id="table-body">
+        </div>
+        <div class="footer">
+            <button onclick="utils.onSubmit(event)">Submit</button>
+        </div>
+    </div>
+    <div style="display: none;">
+        <div class="hidden-row-template">
+            <div>
+                <input type="checkbox" id="check" onchange="utils.onChangeSelect(event, 'check')" />
+            </div>
+            <div>
+                <input type="text" id="name" onblur="utils.onBlurInputHandler(event, 'name') " />
+            </div>
+            <div>
+                <input type="text" id="email" onchange="utils.onBlurInputHandler(event, 'email')" />
+            </div>
+        </div>
+    </div>
+    <script src="./smartTable.js"></script>
+</body>
+
+</html>
