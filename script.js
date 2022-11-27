@@ -160,6 +160,17 @@ console.log(test()); // 1
 // var uppercase = (string) => string.toUpperCase();
 // var reverse = (string) => string.split('').reverse().join('');
 
+// function pipe(...args) {
+//     const context = this;
+//     return function(person) {
+//         let resp = person;
+//         for (var i = 0; i < args.length; i++) {
+//             resp = args[i].call(context, resp);
+//         }
+//         return resp;
+//     }
+// }
+
 // console.log(pipe(
 //     getName,
 //     uppercase,
